@@ -1,0 +1,8 @@
+{
+  "name": "CANAL DETECTIVE : นักสืบคลองบางมด",
+  "description": "Minimal luxury nature documentary web learning experience exploring the changing waters, ecosystem, Bang Mot orange grove heritage, and community stories of Bang Mot Canal behind Wat Phutthabucha (Educational Project | Group A3-03).",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
