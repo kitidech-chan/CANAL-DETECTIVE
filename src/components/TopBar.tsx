@@ -151,13 +151,6 @@ export function TopBar({ activePage, onNavigate, onOpenGuide }: TopBarProps) {
               );
             })}
           </div>
-          <button
-            type="button"
-            onClick={onOpenGuide}
-            className="hidden whitespace-nowrap shrink-0 text-xs font-medium text-[#527A64] underline decoration-[#C9B68C]/70 underline-offset-4 transition-colors hover:text-[#173F35] md:inline-block"
-          >
-            Google Sites Guide
-          </button>
         </div>
       </div>
     </div>
