@@ -1,20 +1,26 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# CANAL DETECTIVE — นักสืบคลองบางมด
 
-# Run and deploy your AI Studio app
+ทุกสายน้ำมีเรื่องราว ทุกการเปลี่ยนแปลงมีเบาะแส
 
-This contains everything you need to run your app locally.
+เว็บไซต์: https://kitidech-chan.github.io/CANAL-DETECTIVE/
 
-View your app in AI Studio: https://ai.studio/apps/f898635c-e154-4c5b-83f6-ee34c8f80d64
+## พัฒนาในเครื่อง
 
-## Run Locally
+ใช้ Node.js 22 ขึ้นไป
 
-**Prerequisites:**  Node.js
+```sh
+npm ci
+npm run dev
+```
 
+เปิด URL ที่ Vite แสดงใน Terminal โดยซอร์ส HTML อยู่ที่ `src/index.html` และแอปเริ่มที่ `src/main.tsx` เว็บนี้ไม่ต้องใช้ API key
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## อัปเดตเว็บบน GitHub Pages
+
+```sh
+npm run build:pages
+```
+
+จากนั้น commit และ push ซอร์สที่แก้ พร้อม `index.html`, `site-assets/` และ `.nojekyll` ไปยัง `main` GitHub Pages จะเผยแพร่จาก branch `main` และโฟลเดอร์ `/` ตามการตั้งค่าเดิม
+
+`index.html` ที่รากโปรเจกต์เป็นไฟล์ที่ build แล้ว ให้แก้ HTML ต้นฉบับใน `src/index.html` ส่วน `node_modules/`, `dist/` และไฟล์ `.env` จะไม่ถูกนำขึ้น GitHub

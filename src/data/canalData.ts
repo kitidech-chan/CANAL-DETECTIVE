@@ -76,10 +76,10 @@ export const PAGES: PageMeta[] = [
 ];
 
 export const GENERATED_ARTWORK = {
-  heroCanal: '/src/assets/images/hero_bangmot_canal_1794839040991.jpg',
-  faunaPlate: '/src/assets/images/plate_aquatic_fauna_1794839041038.jpg',
-  floraPlate: '/src/assets/images/plate_aquatic_flora_1794839042255.jpg',
-  orangeGrove: '/src/assets/images/plate_bangmot_orange_1794839042921.jpg',
+  heroCanal: new URL('../assets/images/hero_bangmot_canal_1794839040991.jpg', import.meta.url).href,
+  faunaPlate: new URL('../assets/images/plate_aquatic_fauna_1794839041038.jpg', import.meta.url).href,
+  floraPlate: new URL('../assets/images/plate_aquatic_flora_1794839042255.jpg', import.meta.url).href,
+  orangeGrove: new URL('../assets/images/plate_bangmot_orange_1794839042921.jpg', import.meta.url).href,
 };
 
 export interface InterviewPerspective {
