@@ -47,10 +47,10 @@ export function EditorialImage({
       </div>
       <figcaption className="mt-3 flex flex-col gap-1 border-b border-[#173F35]/10 pb-3 sm:flex-row sm:items-baseline sm:justify-between">
         <span className="text-xs leading-relaxed text-[#173F35]/80">
-          <strong className="font-serif font-medium italic text-[#173F35]">{figureNumber}</strong>
-          <span className="mx-2 text-[#C9B68C]" aria-hidden="true">
+          {figureNumber && <strong className="font-serif font-medium italic text-[#173F35]">{figureNumber}</strong>}
+          {figureNumber && <span className="mx-2 text-[#C9B68C]" aria-hidden="true">
             ·
-          </span>
+          </span>}
           {caption}
         </span>
         <span className="shrink-0 text-[11px] tracking-wide text-[#527A64]">{sourceLabel}</span>

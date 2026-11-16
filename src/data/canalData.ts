@@ -378,66 +378,26 @@ export interface GalleryCategorySlot {
   id: string;
   enCategory: string;
   thCategory: string;
-  description: string;
-  suggestedCaption: string;
-  sourcePlaceholder: string;
+  image: string;
 }
 
+export const FIELD_PHOTOS = {
+  canal: new URL('../assets/images/S__27435034.jpg', import.meta.url).href,
+  interview: new URL('../assets/images/S__52215820.jpg', import.meta.url).href,
+  orchard: new URL('../assets/images/S__27435027.jpg', import.meta.url).href,
+  aquatic: new URL('../assets/images/S__27435022.jpg', import.meta.url).href,
+  water: new URL('../assets/images/S__52215814.jpg', import.meta.url).href,
+  culture: new URL('../assets/images/S__52215815.jpg', import.meta.url).href,
+  uncleSomjit: new URL('../assets/images/S__52215817.jpg', import.meta.url).href,
+};
+
 export const GALLERY_CATEGORY_SLOTS: GalleryCategorySlot[] = [
-  {
-    id: 'canal-environment',
-    enCategory: 'Canal Environment',
-    thCategory: 'สภาพแวดล้อมคลองหลังวัดพุทธบูชา',
-    description:
-      'พื้นที่สำหรับภาพถ่ายจริงของแนวลำคลอง จุดที่น้ำขุ่นหรือสีคล้ำ เศษขยะและกิ่งไม้สะสม รวมถึงสภาพริมตลิ่งจากการลงพื้นที่ของกลุ่ม A3-03',
-    suggestedCaption: 'ภาพถ่ายภาคสนาม: สภาพลำคลองหลังวัดพุทธบูชา (กลุ่ม A3-03)',
-    sourcePlaceholder: 'ที่มา: ภาพถ่ายจากการลงพื้นที่ภาคสนามในเอกสาร PDF กลุ่ม A3-03',
-  },
-  {
-    id: 'community-interview',
-    enCategory: 'Community Interview',
-    thCategory: 'การสัมภาษณ์คนในชุมชน',
-    description:
-      'พื้นที่สำหรับภาพบรรยากาศการพูดคุยและเก็บข้อมูลจากผู้ให้สัมภาษณ์หลัก 4 ราย โดยคำนึงถึงการไม่เปิดเผยข้อมูลส่วนบุคคลที่ไม่ได้รับอนุญาต',
-    suggestedCaption: 'ภาพถ่ายภาคสนาม: บรรยากาศการสัมภาษณ์ผู้ให้ข้อมูลในชุมชน',
-    sourcePlaceholder: 'ที่มา: ภาพบันทึกภาคสนาม (เบลอ/ไม่ระบุชื่อส่วนบุคคลตามจริยธรรม)',
-  },
-  {
-    id: 'orange-orchard',
-    enCategory: 'Orange Orchard',
-    thCategory: 'สวนส้มบางมดของลุงสมจิตร',
-    description:
-      'พื้นที่สำหรับภาพถ่ายร่องสวน ท้องร่องจัดการน้ำ ต้นส้ม ส้มโอ มะกรูด มะนาว มะรุม และร่องรอยการขยายพันธุ์พืช (เสียบยอด ทาบกิ่ง ติดตา)',
-    suggestedCaption: 'ภาพถ่ายภาคสนาม: พื้นที่ยกร่องและท้องร่องสวนส้มของลุงสมจิตร',
-    sourcePlaceholder: 'ที่มา: ภาพถ่ายภาคสนามสวนส้มลุงสมจิตร เอกสาร PDF กลุ่ม A3-03',
-  },
-  {
-    id: 'aquatic-life',
-    enCategory: 'Aquatic Life',
-    thCategory: 'สัตว์น้ำและพืชน้ำในพื้นที่',
-    description:
-      'พื้นที่สำหรับภาพถ่ายจริงของปลา พืชน้ำ (ผักบุ้ง จอกแหน ดอกบัว) หรือบริเวณร้านจำหน่ายปลาและอาหารปลาที่พบในการสำรวจ',
-    suggestedCaption: 'ภาพถ่ายภาคสนาม: สิ่งมีชีวิตและพืชน้ำในคลองบางมด',
-    sourcePlaceholder: 'ที่มา: ภาพถ่ายจากการสำรวจพื้นที่จริง กลุ่ม A3-03',
-  },
-  {
-    id: 'water-management',
-    enCategory: 'Water Management',
-    thCategory: 'ประตูน้ำและระบบระบายน้ำ',
-    description:
-      'พื้นที่สำหรับภาพถ่ายจริงของประตูน้ำ จุดเชื่อมต่อลำคลอง หรือประตูน้ำบางแห่งที่ชำรุดซึ่งถูกกล่าวถึงในรายงานภาคสนาม',
-    suggestedCaption: 'ภาพถ่ายภาคสนาม: ประตูน้ำและจุดควบคุมการไหลเวียนน้ำในพื้นที่',
-    sourcePlaceholder: 'ที่มา: ภาพถ่ายภาคสนามระบบจัดการน้ำ เอกสาร PDF กลุ่ม A3-03',
-  },
-  {
-    id: 'community-art-culture',
-    enCategory: 'Community Art & Culture',
-    thCategory: 'วิถีชีวิต ศิลปะ และวัฒนธรรมชุมชน',
-    description:
-      'พื้นที่สำหรับภาพถ่ายจริงของบ้านเรือนริมคลอง ท่าน้ำ เรือสัญจร และบรรยากาศวัฒนธรรมชุมชนบริเวณวัดพุทธบูชา',
-    suggestedCaption: 'ภาพถ่ายภาคสนาม: วิถีชีวิตริมน้ำและบ้านเรือนชุมชนคลองบางมด',
-    sourcePlaceholder: 'ที่มา: ภาพถ่ายภาคสนามวิถีชุมชน เอกสาร PDF กลุ่ม A3-03',
-  },
+  {id: 'canal-environment', enCategory: 'Canal Environment', thCategory: 'สภาพแวดล้อมคลองหลังวัดพุทธบูชา', image: FIELD_PHOTOS.canal},
+  {id: 'community-interview', enCategory: 'Community Interview', thCategory: 'การสัมภาษณ์คนในชุมชน', image: FIELD_PHOTOS.interview},
+  {id: 'orange-orchard', enCategory: 'Orange Orchard', thCategory: 'สวนส้มบางมดของลุงสมจิตร', image: FIELD_PHOTOS.orchard},
+  {id: 'aquatic-life', enCategory: 'Aquatic Life', thCategory: 'สัตว์น้ำและพืชน้ำในพื้นที่', image: FIELD_PHOTOS.aquatic},
+  {id: 'water-management', enCategory: 'Water Management', thCategory: 'ประตูน้ำและระบบระบายน้ำ', image: FIELD_PHOTOS.water},
+  {id: 'community-art-culture', enCategory: 'Community Art & Culture', thCategory: 'วิถีชีวิต ศิลปะ และวัฒนธรรมชุมชน', image: FIELD_PHOTOS.culture},
 ];
 
 export const GOOGLE_SITES_STEPS = [

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { ArrowRight } from 'lucide-react';
-import { GENERATED_ARTWORK, PageId } from '../data/canalData';
+import { FIELD_PHOTOS, PageId } from '../data/canalData';
 import { EditorialImage } from './EditorialImage';
 
 interface PageOrangeGroveProps {
@@ -37,11 +37,11 @@ export function PageOrangeGrove({ onNavigate }: PageOrangeGroveProps) {
         <div className="grid gap-10 lg:grid-cols-12 lg:items-start">
           <div className="lg:col-span-6">
             <EditorialImage
-              src={GENERATED_ARTWORK.orangeGrove}
-              alt="ภาพประกอบสารคดีธรรมชาติแสดงร่องสวนส้มบางมดและท้องร่องน้ำ"
-              figureNumber="Plate III"
-              caption="ภาพประกอบเชิงสารคดี: การยกร่องสวนและท้องร่องจัดการน้ำในสวนส้มบางมด"
-              sourceLabel="Editorial Documentary Illustration · ดูภาพจริงในคลังภาพหลักฐาน"
+              src={FIELD_PHOTOS.uncleSomjit}
+              alt="ภาพบุคคล: ลุงสมจิตร"
+              figureNumber=""
+              caption="ภาพบุคคล: ลุงสมจิตร"
+              sourceLabel=""
             />
           </div>
 
